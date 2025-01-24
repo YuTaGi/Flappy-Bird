@@ -6,10 +6,12 @@ public class BirdController : MonoBehaviour
 {
     public float Upforce = 200f;
     private bool IsDead = false;
-    private Rigidbody2D rb2d;    
+    private Rigidbody2D rb2d;
+    private Animator anim;   
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -20,6 +22,8 @@ public class BirdController : MonoBehaviour
             {
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, Upforce));
+
+                anim.SetTrigger("Flap");
             }
         }
     }

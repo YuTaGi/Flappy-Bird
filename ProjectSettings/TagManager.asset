@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Background
+  - Play
+  - Exit
+  - BackToMenu
   layers:
   - Default
   - TransparentFX
